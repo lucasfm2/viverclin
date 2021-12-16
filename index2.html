@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viver Clin</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <!-- ÍCONE DA PAGINA -->
+        <link href="imagens/iconeviverclin.png" rel="shortcut icon" type="image/x-icon">
+        <a href="#" id="logo">
+            <img src="imagens/iconeviverclin.png" alt="ViverClin">
+        </a>
+        <!------------------ -->
+        <!-- MENU -->
+        <nav>
+            <ul id="navbar">
+                <li><a href="#" class="nav-link">Plano Familiar e Individual</a></li>
+                <li><a href="#" class="nav-link">Planos Empresariais</a></li>
+                <li><a href="#" class="nav-link">Redes Credenciadas</a></li>
+                <li><a href="#" class="nav-link">Entrar</a></li>
+            </ul>
+        </nav>
+        <div id="slider">
+            <div id="banner">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <img src="imagens/meio.png">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <img src="imagens/amorecuidado.png">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <img src="imagens/boasfestas.png">
+                    </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex = 1 }
+                        if (n < 1) { slideIndex = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+                </script>
+            </div>
+        </div>
+        <section id="news">
+        	<div id="news_item">
+            	<img src="imagens/historico-medico.png" alt="News 01"/>
+                <h2 class="news_titulo"></h2>
+				<a href="#" id="news_item2" class="leia">Agendamento de Consultas</a>
+            </div>
+            <div id="news_item">
+            	<img src="imagens/bilhete.png" alt="News 02"/>
+                <h2 class="news_titulo"></h2>
+				<a href="#" id="news_item2" class="leia">2 via boleto</a>
+            </div>
+            <div id="news_item">
+            	<img src="imagens/atendimento-ao-cliente.png" alt="News 03"/>
+                <h2 class="news_titulo"></h2>
+				<a href="#" id="news_item2" class="leia">Atendimento online</a>
+            </div>
+            <div id="news_item">
+            	<img src="imagens/exame-medico.png" alt="News 04"/>
+                <h2 class="news_titulo"></h2>
+				<a href="#" id="news_item2" class="leia">Resultado de Exames</a>
+            </div>
+</section>
+    </header>
+    <footer>
+        <div id="menu_social">
+            <ul>
+                <li><a href="http://www.twitter.com" class="twitter"></a></li>
+                <li><a href="http://www.facebook.com" class="facebook"></a></li>
+            </ul>
+        </div>
+        <p class="texto_rodape">Copyright 2021 Display. All Rights
+            Reserved.</p>
+    </footer>
+    </main>
+</body>
+
+</html>
+
